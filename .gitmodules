@@ -1,0 +1,6 @@
+[submodule "Mande-Backend"]
+	path = Mande-Backend
+	url = https://github.com/Mande-Project/Mande-Backend.git
+[submodule "Mande-Frontend"]
+	path = Mande-Frontend
+	url = https://github.com/Mande-Project/Mande-Frontend.git
