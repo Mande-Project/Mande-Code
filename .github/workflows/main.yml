@@ -3,7 +3,7 @@ name: 'Submodules Sync'
 on:
   # Allows to start this action every five minutes
   schedule:
-    - cron: '*/30 1 * * *'
+    - cron: '*/5 * * * *'
 
 jobs:
   sync:
@@ -27,6 +27,7 @@ jobs:
     - name: Git Sumbodule Update
       run: |
         git pull --recurse-submodules
+        git submodule foreach git config pull.rebase true
         git submodule foreach git pull origin main
 
     - name: Commit update
