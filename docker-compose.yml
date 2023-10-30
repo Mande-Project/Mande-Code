@@ -1,0 +1,21 @@
+version: '3.11'
+
+services:
+  frontend:
+    build:
+      context: ./Mande-Frontend/client
+    restart: always
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+
+  backend:
+    #volumes:
+      #- static:/static
+    build:
+      context: ./Mande-Backend
+    ports:
+      - "8000:8000"
+
+    
